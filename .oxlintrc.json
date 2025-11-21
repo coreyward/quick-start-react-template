@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "unicorn", "typescript", "oxc", "jsx-a11y"],
+  "categories": {
+    "correctness": "deny",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "rules": {
+    "curly": "error",
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "react/react-in-jsx-scope": "allow"
+  }
+}
