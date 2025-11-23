@@ -25,6 +25,13 @@ export default defineConfig([
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    rules: {
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+      "@typescript-eslint/restrict-template-expressions": [
+        "error",
+        { allowNumber: true },
+      ],
+    },
   },
   ...oxlint.buildFromOxlintConfigFile("./.oxlintrc.json"),
 ]);
