@@ -1,6 +1,9 @@
-ignoredBuiltDependencies:
-  - unrs-resolver
+# The minimum number of minutes that must pass after a version is published
+# before pnpm will install it. This applies to all dependencies, including
+# transitive ones.
+minimumReleaseAge: 300 # 5 hours
 
-onlyBuiltDependencies:
-  - "@swc/core"
-  - esbuild
+# This ensures that all transitive dependencies are resolved from trusted
+# sources, reducing the risk of supply chain attacks.
+# See: https://pnpm.io/settings#blockexoticsubdeps
+blockExoticSubdeps: true
