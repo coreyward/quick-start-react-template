@@ -57,13 +57,14 @@ pnpm preview
 ├── tsconfig.json        # TypeScript config (references)
 ├── tsconfig.app.json    # TypeScript config for app code
 ├── tsconfig.node.json   # TypeScript config for Node.js tooling
-├── .oxlintrc.json       # OxLint configuration
+├── oxlint.config.ts     # OxLint configuration
 └── .prettierignore      # Prettier ignore patterns
 ```
 
 ## Linting Strategy
 
-OxLint is the only linter, running with type-aware checking (`--type-aware`, backed by
+OxLint is the only linter. It is configured in `oxlint.config.ts` (a typed config, via
+OxLint's `defineConfig`) and runs with type-aware checking (`--type-aware`, backed by
 `oxlint-tsgolint`) at the `correctness`, `suspicious`, `perf`, and `pedantic` levels:
 
 - Correctness rules (syntax errors, common mistakes)
