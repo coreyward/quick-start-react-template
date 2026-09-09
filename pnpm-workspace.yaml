@@ -7,3 +7,7 @@ minimumReleaseAge: 300 # 5 hours
 # sources, reducing the risk of supply chain attacks.
 # See: https://pnpm.io/settings#blockexoticsubdeps
 blockExoticSubdeps: true
+
+# No dependency is permitted to run install/build scripts. An empty list denies
+# all of them; add a package here only after auditing why it needs to build.
+onlyBuiltDependencies: []
